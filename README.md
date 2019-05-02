@@ -30,13 +30,13 @@
 
 - [x] 1 - Possibilitar deletar registro
 
-2 - Possibilitar edição dos dados.
+- [x] 2 - Possibilitar edição dos dados.
 
 - [x] 3 - Criar menu com acesso as telas de cadastro e listagem.
 
 **Melhorias não obrigatórias - Pontos Extras**
 
-1 - Exibir na listagem o perfil do usuário
+- [] 1 - Exibir na listagem o perfil do usuário
 
 - [x] 2 - Incluir e usar a biblioteca Bootstrap ou Materialize
 
