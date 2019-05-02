@@ -65,9 +65,9 @@ $dao = new UsuarioDAO();
                     <div class="form-group">
                         <label>Perfil</label>
                         <select name="id_perfil" id="id_perfil" class="form-control">
-                            <option value="1">Administrador</option>
-                            <option value="2">Atendente</option>
-                            <option value="3">Desenvolvedor</option>
+                            <option value="1" <?=($usuario->getIdPerfil() == 1)?'selected':'';?> >Administrador</option>
+                            <option value="2" <?=($usuario->getIdPerfil() == 2)?'selected':'';?> >Atendente</option>
+                            <option value="3" <?=($usuario->getIdPerfil() == 3)?'selected':'';?>>Desenvolvedor</option>
                         </select>
                     </div>
                 </div>

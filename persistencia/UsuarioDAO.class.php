@@ -4,19 +4,19 @@ include_once DIR_PERSISTENCIA . 'Conexao.class.php';
 include_once DIR_MODELO . 'UsuarioVO.class.php';
 
 class UsuarioDAO {
-    
+
     private $conexao = null;
-    
+
     function __construct() {
     }
-    
+
     function listar($filtros) {
         try{
             $query = ("SELECT * FROM usuario u WHERE nm_usuario LIKE '%$filtros%' OR nr_cpf LIKE '%$filtros%' ORDER BY u.nm_usuario ASC");
 
             $this->conexao = Conexao::connect()->query($query);
             $array = $this->conexao->fetchAll(PDO::FETCH_ASSOC);
-            
+
             $usuarios = array();
 
             foreach ($array as $obj) {
@@ -49,7 +49,7 @@ class UsuarioDAO {
             $query = ("SELECT * FROM usuario WHERE id_usuario = '$id'");
             $this->conexao = Conexao::connect()->query($query);
             $array = $this->conexao->fetchAll(PDO::FETCH_ASSOC);
-            
+
             $usuarios = array();
 
             foreach ($array as $obj) {
@@ -76,7 +76,7 @@ class UsuarioDAO {
         }
     }
 
- 
+
 
     function cadastrar(UsuarioVO $usuario){
         try{
@@ -123,7 +123,7 @@ class UsuarioDAO {
      function editar(UsuarioVO $usuario){
         try {
             $sql = "
-            UPDATE usuario 
+            UPDATE usuario
                     SET nm_usuario = '{$usuario->getNmUsuario()}',
                     nr_cpf = '{$usuario->getNrCpf()}',
                     ds_email = '{$usuario->getDsEmail()}',
@@ -136,7 +136,7 @@ class UsuarioDAO {
                     dt_cadastro = now(),
                     dt_alteracao = now()
                     WHERE id_usuario = '{$usuario->getIdUsuario()}'";
-                    
+
             $this->conexao = Conexao::connect()->prepare($sql);
             $this->conexao->execute();
             $this->conexao = null;
@@ -150,8 +150,8 @@ class UsuarioDAO {
         try{
             $sql = " DELETE FROM usuario "
                 . " where id_usuario = " . $usuario->getIdUsuario();
-        
-            
+
+
             $this->conexao = Conexao::connect()->prepare($sql);
             $this->conexao->execute();
             $this->conexao = null;
@@ -162,7 +162,7 @@ class UsuarioDAO {
         }catch(Exception $e){
             echo  $usuario->getIdUsuario();
             echo "Erro ao excluir o Usuario";
-            
+
             return false;
         }
     }
