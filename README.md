@@ -14,7 +14,7 @@
 
 - [x] 2 - Ter uma coluna de ações, com botões para editar e deletar
 
-- [] 3 - Em caso de não trazer registro, ter uma mensagem "nenhum registro encontrado" e não exibir a mensagem
+- [ ] 3 - Em caso de não trazer registro, ter uma mensagem "nenhum registro encontrado" e não exibir a mensagem
 
 - [x] 4 - Criar uma area de filtro, que possa buscar por nome e cpf
 
@@ -38,10 +38,10 @@
 
 1 - Exibir na listagem o perfil do usuário
 
-- [x]2 - Incluir e usar a biblioteca Bootstrap ou Materialize
+- [x] 2 - Incluir e usar a biblioteca Bootstrap ou Materialize
 
-- [x]3 - Incluir e usar a biblioteca Jquery
+- [x] 3 - Incluir e usar a biblioteca Jquery
 
-4 - Criar CRUD de perfil e fazer o relacionamento com usuário
+- [ ] 4 - Criar CRUD de perfil e fazer o relacionamento com usuário
 
-- [x]5 - Nesta tela de instruções, criar checkbox para marcar que a tarefa foi concluida e salvar este estado sem usar a session do PHP e nem o banco de dados.
+- [x] 5 - Nesta tela de instruções, criar checkbox para marcar que a tarefa foi concluida e salvar este estado sem usar a session do PHP e nem o banco de dados.
